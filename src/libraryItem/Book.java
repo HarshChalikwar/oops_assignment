@@ -1,20 +1,19 @@
 package libraryItem;
 
-
-public class Journal implements LibraryItem{
+public class Book implements LibraryItem{
 	private String title;
 	private String author;
 	private int UniqueId;
-	private int volume;
+	private int edition;
 	private int quantity;
 	private int issued = 0;
-	public Journal(String title,String author,int UniqueId,int quantity,int volume)
+	public Book(String title,String author,int UniqueId,int edition,int quantity)
 	{
 		this.author = author;
 		this.title = title;
-		this.UniqueId = UniqueId;
+		this.edition = edition;
 		this.quantity = quantity;
-		this.volume = volume;
+		this.UniqueId = UniqueId;
 	}
 	
 	public String getTitle()
@@ -27,5 +26,8 @@ public class Journal implements LibraryItem{
 	public int getUniqueId() {
 		return this.UniqueId;
 	}
+	
+	public void decreaseQuantity() {
+		quantity--;
+	}
 }
-

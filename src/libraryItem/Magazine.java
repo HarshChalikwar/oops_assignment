@@ -1,20 +1,18 @@
 package libraryItem;
 
-
-public class Journal implements LibraryItem{
+public class Magazine implements LibraryItem{
 	private String title;
 	private String author;
 	private int UniqueId;
-	private int volume;
 	private int quantity;
 	private int issued = 0;
-	public Journal(String title,String author,int UniqueId,int quantity,int volume)
+	public Magazine(String title,String author,int UniqueId,int quantity)
 	{
 		this.author = author;
 		this.title = title;
 		this.UniqueId = UniqueId;
 		this.quantity = quantity;
-		this.volume = volume;
+		
 	}
 	
 	public String getTitle()
@@ -28,4 +26,3 @@ public class Journal implements LibraryItem{
 		return this.UniqueId;
 	}
 }
-
